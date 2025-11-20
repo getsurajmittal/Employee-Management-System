@@ -19,8 +19,17 @@ public class Splash extends JFrame {
         setLayout(null);
         setVisible(true); //make the frame visible in the class
 
+        try{
+            Thread.sleep(5000);
+            setVisible(false); //close splash frame after 5 seconds
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
     public static void main(String args[]){
         new Splash(); //creating new object
+
     }
 }
